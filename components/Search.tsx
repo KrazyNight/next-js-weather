@@ -1,7 +1,7 @@
 "use client"
 import React from 'react'
 import { useState } from "react";
-import search from "../assets/images/icon-search.svg";
+import search from "/assets/images/icon-search.svg";
 import Image from 'next/image';
 
 

@@ -41,16 +41,21 @@ button {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* .weather-bg {
-  background: url("./assets/images/bg-today-small.svg") no-repeat center/cover;
-} */
+.weather-bg {
+  background: url("../assets/images/bg-today-small.svg");
+  background-size: cover;
+  background-position: center;
+
+}
 
 ::-webkit-scrollbar {
   display: none;
 }
-/* 
+
 @media (min-width: 768px) {
   .weather-bg {
-    background: url("./assets/images/bg-today-large.svg") no-repeat center/cover;
+    background: url("../assets/images/bg-today-large.svg") no-repeat;
+    background-size: cover;
+    background-position: center;
   }
-} */
+}
