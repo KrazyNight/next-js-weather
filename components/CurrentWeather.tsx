@@ -20,7 +20,7 @@ export default function CurrentWeather() {
           alt="sunny"
           width={200}  // Explicit width
           height={200}
-          className=""
+          className=" "
           />
 
           {/* <WeatherIcon code={weatherCode} size="large" /> */}
