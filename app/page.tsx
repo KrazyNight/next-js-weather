@@ -36,6 +36,7 @@ export default function Home() {
           </div>
           <div className="lg:col-span-1">
             <HourlyForecast />
+            
           </div>
         </div>
       
