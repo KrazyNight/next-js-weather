@@ -12,7 +12,7 @@ import Image from 'next/image'; // 1. Import the component
 
 
 export default function Header({ units, onToggleUnits }) {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  // const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
 
 
@@ -25,7 +25,7 @@ export default function Header({ units, onToggleUnits }) {
 
       <div className="relative">
         <button
-          onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+          // onClick={() => setIsDropdownOpen(!isDropdownOpen)}
           className="flex items-center space-x-2 glass-card px-4 py-2 rounded-lg hover:bg-white/20 transition-all duration-200"
         >
           <Image src={unitsIcon} alt="" className="inline-block mr-2" />
@@ -33,21 +33,22 @@ export default function Header({ units, onToggleUnits }) {
           <Image
             src={dropdown}
             alt=""
-            className={`inline-block ml-2 ${
-              isDropdownOpen ? "rotate-180 transition" : ""
-            }`}
+            className='inline-block ml-2'
+            // className={`inline-block ml-2 ${
+            //   isDropdownOpen ? "rotate-180 transition" : ""
+            // }`}
           />
         </button>
 
-        {isDropdownOpen && (
+        {/* {isDropdownOpen && ( */}
           <div className="absolute right-0 mt-2 w-48 glass-card rounded-lg shadow-lg z-50 text-sm">
             <div className="p-4">
               <div className="flex items-center justify-between mb-4">
                 <button
-                  onClick={() => {
-                    onToggleUnits();
-                    setIsDropdownOpen(false);
-                  }}
+                  // onClick={() => {
+                  //   onToggleUnits();
+                  //   setIsDropdownOpen(false);
+                  // }}
                   className="text-white glass-card p-2 rounded-lg transition-colors w-full"
                 >
                   Switch to {units === "metric" ? "Imperial" : "Metric"}
@@ -59,9 +60,10 @@ export default function Header({ units, onToggleUnits }) {
                   <div className="text-white text-sm mb-2">Temperature</div>
                   <div className="space-y-1">
                     <div
-                      className={`flex items-center justify-between px-3 py-2 rounded ${
-                        units === "metric" ? "bg-white/20" : "hover:bg-white/10"
-                      } transition-colors`}
+                    className='flex items-center justify-between px-3 py-2 rounded'
+                      // className={`flex items-center justify-between px-3 py-2 rounded ${
+                      //   units === "metric" ? "bg-white/20" : "hover:bg-white/10"
+                      // } transition-colors`}
                     >
                       <span className="text-white">Celcius (&deg;C)</span>
                       {units === "metric" && (
@@ -74,11 +76,12 @@ export default function Header({ units, onToggleUnits }) {
                     </div>
 
                     <div
-                      className={`flex items-center justify-between px-3 py-2 rounded ${
-                        units === "imperial"
-                          ? "bg-white/20"
-                          : "hover:bg-white/10"
-                      } transition-colors`}
+                    className="flex items-center justify-between px-3 py-2 rounded"
+                      // className={`flex items-center justify-between px-3 py-2 rounded ${
+                      //   units === "imperial"
+                      //     ? "bg-white/20"
+                      //     : "hover:bg-white/10"
+                      // } transition-colors`}
                     >
                       <span className="text-white">Fahrenheit (&deg;F)</span>
                       {units === "imperial" && (
@@ -169,7 +172,7 @@ export default function Header({ units, onToggleUnits }) {
               </div>
             </div>
           </div>
-        )}
+        {/* )} */}
       </div>
     </header>
     </>
