@@ -5,6 +5,7 @@ import HourlyForecast from "@/components/HourlyForecast";
 import Metrics from "@/components/Metrics";
 import Search from "@/components/Search";
 import Image from "next/image";
+// this is need code template. 
 
 export default function Home() {
   return (
