@@ -3,7 +3,14 @@ import React from 'react'
 import Image from 'next/image';
 import weatherIcon from "/assets/images/icon-sunny.webp";
 
-export default function CurrentWeather() {
+export default function CurrentWeather({ data, location }) {
+  
+  if (!data) return null;
+
+  const currentTemp = Math.round(data.current.temperature_2m);
+  const weatherCode = data.current.weather_code;
+
+
   return (
     <>
     {/* weather-bg is calling the the blue background, saved in global.csss file */}
@@ -23,7 +30,7 @@ export default function CurrentWeather() {
           className=" "
           />
 
-          {/* <WeatherIcon code={weatherCode} size="large" /> */}
+          {/* <WeatherIcon code={weatherCode} size="large" /> THIS IS IMAGE ABOVE*/}
           <div className="ml-8 text-8xl font-bold text-white text-shadow italic">
             10&deg;
           </div>
