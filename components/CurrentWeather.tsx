@@ -24,15 +24,15 @@ interface CurrentWeatherProps {
 }
 
 export default function CurrentWeather({ data, location }: CurrentWeatherProps) {
-  // // Prevent application crashes if data is missing
-  // if (!data || !data.current || !location) {
-  //   return null;
-  // }
+  // Prevent application crashes if data is missing
+  if (!data || !data.current || !location) {
+    return null;
+  }
 
-  // // Support both Open-Meteo (temperature_2m) and alternative API formats
-  // const rawTemp = data.current.temperature_2m ?? data.current.temperature ?? 0;
-  // const currentTemp = Math.round(rawTemp);
-  // const weatherCode = data.current.weather_code;
+  // Support both Open-Meteo (temperature_2m) and alternative API formats
+  const rawTemp = data.current.temperature_2m ?? data.current.temperature ?? 0;
+  const currentTemp = Math.round(rawTemp);
+  const weatherCode = data.current.weather_code;
 
   return (
     <>
