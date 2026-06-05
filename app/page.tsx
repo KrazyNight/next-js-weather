@@ -1,4 +1,4 @@
-
+"use client"
 import CurrentWeather from "@/components/CurrentWeather";
 import DailyForecast from "@/components/DailyForecast";
 import Header from "@/components/Header";
@@ -7,8 +7,17 @@ import Metrics from "@/components/Metrics";
 import Search from "@/components/Search";
 import Image from "next/image";
 // this is need code template. 
+import { useState, useEffect } from "react";
 
 export default function Home() {
+
+  const [weatherData, setWeatherData] = useState(null);
+  const [location, setLocation] = useState({
+    name: "Berlin, Germany",
+    lat: 52.52,
+    lon: 13.405,
+  });
+
   return (
     <>
     {/* <Header />
@@ -30,10 +39,11 @@ export default function Home() {
           <Search />
         </div>
   {/* GRID INFO */}
+  
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <div className="lg:col-span-2 space-y-6">
-            <CurrentWeather  />
+            <CurrentWeather data={weatherData} location={location} />
             <Metrics />
             <DailyForecast />
           </div>
@@ -42,6 +52,7 @@ export default function Home() {
             
           </div>
         </div>
+    
       
       </div>
     </div>
