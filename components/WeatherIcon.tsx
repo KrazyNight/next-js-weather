@@ -1,3 +1,4 @@
+import React from 'react';
 import sunny from "../assets/images/icon-sunny.webp"; 
 import overcast from "../assets/images/icon-overcast.webp"; 
 import partlyCloudy from "../assets/images/icon-partly-cloudy.webp"; 

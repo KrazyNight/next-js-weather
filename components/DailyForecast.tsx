@@ -1,5 +1,5 @@
 "use client";
-
+import React from 'react'
 import { useRouter, useSearchParams, usePathname } from "next/navigation";
 import WeatherIcon from "./WeatherIcon";
 import { getDayName } from "../lib/utils";
